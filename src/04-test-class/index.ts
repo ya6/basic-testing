@@ -76,3 +76,18 @@ export class InsufficientFundsError extends Error {
     super(`Insufficient funds: cannot withdraw more than ${balance}`);
   }
 }
+console.log('-4-');
+const acc = getBankAccount(100);
+// console.log(acc);
+// (async () => {
+//   const res = await acc.fetchBalance();
+//   console.log('-->', res);
+//   console.log('-->', typeof res);
+// })();
+
+(async () => {
+  const res = await acc.synchronizeBalance();
+  console.log('-->', res);
+  console.log('-->', typeof res);
+})();
+// console.log(acc.fetchBalance().then((res) => console.log(res)));

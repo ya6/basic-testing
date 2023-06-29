@@ -10,9 +10,10 @@
   "scripts": {
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "eslint \"src/**/*.ts\" --fix",
-    "test": "jest --silent",
+    "test": "jest --silent --watch",
     "test:verbose": "jest",
-    "build": "tsc"
+    "build": "tsc",
+    "start:4": "ts-node src/04-test-class/index.ts"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.22.5",
